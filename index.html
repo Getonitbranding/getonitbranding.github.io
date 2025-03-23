@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getonit Branding Crafts</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            background-color: #fff8e1; 
+            color: #4a2c2a; 
+        }
+        header { 
+            background-color: #d81b60; 
+            color: white; 
+            text-align: center; 
+            padding: 20px; 
+        }
+        h1 { margin: 0; }
+        .gallery { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            padding: 20px; 
+        }
+        .item { 
+            background-color: #ffebee; 
+            margin: 10px; 
+            padding: 15px; 
+            width: 200px; 
+            text-align: center; 
+            border-radius: 5px; 
+        }
+        .item img { 
+            max-width: 100%; 
+            height: auto; 
+        }
+        .price { 
+            font-weight: bold; 
+            color: #d81b60; 
+        }
+        .contact { 
+            max-width: 500px; 
+            margin: 20px auto; 
+            padding: 20px; 
+            background-color: #f8bbd0; 
+            border-radius: 5px; 
+        }
+        input, textarea, button { 
+            width: 100%; 
+            margin: 10px 0; 
+            padding: 8px; 
+            border: none; 
+            border-radius: 3px; 
+        }
+        button { 
+            background-color: #d81b60; 
+            color: white; 
+            cursor: pointer; 
+        }
+        button:hover { background-color: #ad1457; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Getonit Branding Crafts</h1>
+        <p>Handmade with Love</p>
+    </header>
+
+    <section class="gallery">
+        <div class="item">
+            <img src="https://via.placeholder.com/150" alt="Craft 1">
+            <h3>Wooden Coaster Set</h3>
+            <p class="price">$15</p>
+            <p>Perfect for your coffee table!</p>
+        </div>
+        <div class="item">
+            <img src="https://via.placeholder.com/150" alt="Craft 2">
+            <h3>Knitted Scarf</h3>
+            <p class="price">$25</p>
+            <p>Cozy and warm for winter.</p>
+        </div>
+        <div class="item">
+            <img src="https://via.placeholder.com/150" alt="Craft 3">
+            <h3>Beaded Bracelet</h3>
+            <p class="price">$10</p>
+            <p>Simple, stylish, handmade.</p>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Order Now</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="What would you like to order?" rows="4" required></textarea>
+            <button type="submit">Send Order</button>
+        </form>
+        <p>Or email me at: yourname@example.com</p>
+    </section>
+</body>
+</html>
