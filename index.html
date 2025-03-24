@@ -8,15 +8,17 @@
         body { 
             font-family: Arial, sans-serif; 
             margin: 0; 
-            background-image: url('background.jpg'); /* Added */
-            background-size: cover; /* Scales to fit screen */
-            background-position: center; /* Centers image */
-            background-repeat: no-repeat; /* No tiling */
+            background-image: url('background.jpg') !important; /* Added !important */
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+            background-color: #f5f5f5; /* Fallback */
             color: #4a2c2a; 
             line-height: 1.6;
         }
         header { 
-            background-color: rgba(46, 125, 50, 0.9); /* Forest green, semi-transparent */
+            background-color: rgba(46, 125, 50, 0.98); /* More opaque for readability */
             color: white; 
             text-align: center; 
             padding: 30px; 
@@ -34,7 +36,7 @@
             padding: 20px; 
         }
         .item { 
-            background-color: rgba(224, 247, 250, 0.9); /* Light cyan, semi-transparent */
+            background-color: rgba(224, 247, 250, 0.98); /* More opaque */
             margin: 15px; 
             padding: 20px; 
             width: 220px; 
@@ -59,7 +61,7 @@
             max-width: 500px; 
             margin: 30px auto; 
             padding: 25px; 
-            background-color: rgba(178, 223, 219, 0.9); /* Pale teal, semi-transparent */
+            background-color: rgba(178, 223, 219, 0.98); /* More opaque */
             border-radius: 8px; 
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
