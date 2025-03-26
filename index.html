@@ -6,27 +6,30 @@
     <title>Get on it Branding & Giftware</title>
     <style>
         body { 
-            font-family: Arial, sans-serif; 
-            margin: 0; 
+            font-family: Arial, sans-serif;
+            margin: 0;
             background-image: url('background.jpg') !important;
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat; 
-            background-attachment: fixed; 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             background-color: #f5f5f5;
-            color: #4a2c2a; 
+            color: #4a2c2a;
             line-height: 1.6;
         }
-        header { 
-            color: white; 
-            text-align: center; 
-            padding: 30px; 
+        header {
+            color: white;
+            text-align: center;
+            padding: 30px;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
-        h1 { 
-            margin: 0; 
-            font-size: 2.5em; 
-            font-weight: bold;
+        /* New styles for the header image */
+        .header-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            max-height: 150px; /* Adjust this value based on your needs */
         }
         .about {
             text-align: center;
@@ -34,11 +37,11 @@
             color: #4a2c2a;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
-        .gallery { 
-            display: flex; 
-            flex-wrap: wrap; 
-            justify-content: center; 
-            padding: 20px; 
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
         }
         .gallery h2 {
             width: 100%;
@@ -47,42 +50,42 @@
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
             margin: 20px 0;
         }
-        .item { 
-            margin: 15px; 
-            padding: 20px; 
-            width: 220px; 
-            text-align: center; 
-            border-radius: 8px; 
+        .item {
+            margin: 15px;
+            padding: 20px;
+            width: 220px;
+            text-align: center;
+            border-radius: 8px;
             transition: transform 0.3s, box-shadow 0.3s;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
-        .item:hover { 
-            transform: scale(1.05); 
+        .item:hover {
+            transform: scale(1.05);
             box-shadow: 0 0 10px rgba(46, 125, 50, 0.5);
         }
-        .item img { 
-            max-width: 100%; 
-            height: auto; 
+        .item img {
+            max-width: 100%;
+            height: auto;
             border-radius: 5px;
         }
-        .price { 
-            font-weight: bold; 
-            color: #2e7d32; 
+        .price {
+            font-weight: bold;
+            color: #2e7d32;
             font-size: 1.2em;
         }
-        .contact { 
-            max-width: 600px; 
-            margin: 30px auto; 
-            padding: 25px; 
-            border-radius: 8px; 
+        .contact {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 8px;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
-        input, textarea, select, button { 
-            width: 100%; 
-            margin: 12px 0; 
-            padding: 10px; 
-            border: none; 
-            border-radius: 5px; 
+        input, textarea, select, button {
+            width: 100%;
+            margin: 12px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
             font-size: 1em;
             box-sizing: border-box;
         }
@@ -90,16 +93,15 @@
             background-color: #fff;
             color: #4a2c2a;
         }
-        button { 
-            background-color: #2e7d32; 
-            color: white; 
-            cursor: pointer; 
+        button {
+            background-color: #2e7d32;
+            color: white;
+            cursor: pointer;
             font-weight: bold;
         }
-        button:hover { 
-            background-color: #1b5e20; 
+        button:hover {
+            background-color: #1b5e20;
         }
-
         /* Style for Inspirational Creations */
         .inspirational-creations {
             padding: 20px;
@@ -128,15 +130,15 @@
 </head>
 <body>
     <header>
-        <h1>Get on it Branding and Giftware</h1>
+        <img src="header-logo.jpg" alt="Get on it Branding and Giftware Logo" class="header-image">
         <p>Handmade with Love</p>
     </header>
-
+    
     <section class="about">
         <h2>About Our Craft</h2>
         <p>Each piece is handcrafted from premium timber or acrylic, using laser engraving, routing, or resin-filling techniques. From chopping boards to lathe-turned vases, we bring your vision to life with precision and care.</p>
     </section>
-
+    
     <section class="gallery">
         <h2>Chopping Boards</h2>
         <div class="item">
@@ -151,7 +153,7 @@
             <p class="price">Starting at $60</p>
             <p>Routed designs filled with vibrant resin. Personalize your pattern!</p>
         </div>
-
+        
         <h2>Coasters</h2>
         <div class="item">
             <img src="coaster_acrylic.jpg" alt="Acrylic Coasters">
@@ -165,7 +167,7 @@
             <p class="price">Starting at $25 (Set of 4)</p>
             <p>Timber with routed, resin-filled accents.</p>
         </div>
-
+        
         <h2>Custom Boxes</h2>
         <div class="item">
             <img src="box_sliding_lid.jpg" alt="Sliding Lid Box">
@@ -179,7 +181,7 @@
             <p class="price">Starting at $40</p>
             <p>Elegant hinged design with optional engraving.</p>
         </div>
-
+        
         <h2>Lathe Creations</h2>
         <div class="item">
             <img src="bowl_timber.jpg" alt="Timber Bowl">
@@ -194,7 +196,7 @@
             <p>Smooth, lathe-crafted timber for perfect dough rolling.</p>
         </div>
     </section>
-
+    
     <!-- Inspirational Creations Section -->
     <section class="inspirational-creations">
         <h2>Inspirational Creations</h2>
@@ -214,7 +216,7 @@
             <p>custom design.</p>
         </div>
     </section>
-
+    
     <section class="contact">
         <h2>Order Now</h2>
         <p>Personalize your order—tell us your design and color preferences!</p>
