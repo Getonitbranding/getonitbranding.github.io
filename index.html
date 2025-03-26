@@ -4,13 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get on it Branding & Giftware</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            background-image: url('background.jpg') !important;
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+            background-color: #f5f5f5;
+            color: #4a2c2a; 
+            line-height: 1.6;
+        }
+        header { 
+            color: white; 
+            text-align: center; 
+            padding: 30px; 
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        h1 { 
+            margin: 0; 
+            font-size: 2.5em; 
+            font-weight: bold;
+        }
+        .about {
+            text-align: center;
+            padding: 20px;
+            color: #4a2c2a;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        .gallery { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            padding: 20px; 
+        }
+        .gallery h2 {
+            width: 100%;
+            text-align: center;
+            color: #2e7d32;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            margin: 20px 0;
+        }
+        .item { 
+            margin: 15px; 
+            padding: 20px; 
+            width: 220px; 
+            text-align: center; 
+            border-radius: 8px; 
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        .item:hover { 
+            transform: scale(1.05); 
+            box-shadow: 0 0 10px rgba(46, 125, 50, 0.5);
+        }
+        .item img { 
+            max-width: 100%; 
+            height: auto; 
+            border-radius: 5px;
+        }
+        .price { 
+            font-weight: bold; 
+            color: #2e7d32; 
+            font-size: 1.2em;
+        }
+        .contact { 
+            max-width: 600px; 
+            margin: 30px auto; 
+            padding: 25px; 
+            border-radius: 8px; 
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        input, textarea, select, button { 
+            width: 100%; 
+            margin: 12px 0; 
+            padding: 10px; 
+            border: none; 
+            border-radius: 5px; 
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+        select {
+            background-color: #fff;
+            color: #4a2c2a;
+        }
+        button { 
+            background-color: #2e7d32; 
+            color: white; 
+            cursor: pointer; 
+            font-weight: bold;
+        }
+        button:hover { 
+            background-color: #1b5e20; 
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Get on it Branding and Giftware</h1>
         <p>Handmade with Love</p>
-        <button id="inspirationBtn" class="inspiration-btn">View Inspiration Gallery</button>
     </header>
 
     <section class="about">
@@ -21,13 +115,13 @@
     <section class="gallery">
         <h2>Chopping Boards</h2>
         <div class="item">
-            <img src="images/chopping_board_laser.jpg" alt="Laser-Etched Chopping Board">
+            <img src="chopping_board_laser.jpg" alt="Laser-Etched Chopping Board">
             <h3>Laser-Etched Chopping Board</h3>
             <p class="price">Starting at $45</p>
             <p>Custom designs lasered into premium timber. Sizes: 12x18" or 16x24".</p>
         </div>
         <div class="item">
-            <img src="images/chopping_board_resin.jpg" alt="Resin-Filled Chopping Board">
+            <img src="chopping_board_resin.jpg" alt="Resin-Filled Chopping Board">
             <h3>Resin-Filled Chopping Board</h3>
             <p class="price">Starting at $60</p>
             <p>Routed designs filled with vibrant resin. Personalize your pattern!</p>
@@ -35,13 +129,13 @@
 
         <h2>Coasters</h2>
         <div class="item">
-            <img src="images/coaster_acrylic.jpg" alt="Acrylic Coasters">
+            <img src="coaster_acrylic.jpg" alt="Acrylic Coasters">
             <h3>Acrylic Coasters</h3>
             <p class="price">Starting at $15 (Set of 4)</p>
             <p>Laser-etched designs on durable acrylic.</p>
         </div>
         <div class="item">
-            <img src="images/coaster_resin.jpg" alt="Resin Timber Coasters">
+            <img src="coaster_resin.jpg" alt="Resin Timber Coasters">
             <h3>Resin Timber Coasters</h3>
             <p class="price">Starting at $25 (Set of 4)</p>
             <p>Timber with routed, resin-filled accents.</p>
@@ -49,13 +143,13 @@
 
         <h2>Custom Boxes</h2>
         <div class="item">
-            <img src="images/box_sliding_lid.jpg" alt="Sliding Lid Box">
+            <img src="box_sliding_lid.jpg" alt="Sliding Lid Box">
             <h3>Sliding Lid Timber Box</h3>
             <p class="price">Starting at $35</p>
             <p>Handcrafted with a smooth sliding lid. Custom sizes available.</p>
         </div>
         <div class="item">
-            <img src="images/box_hinged_lid.jpg" alt="Hinged Lid Box">
+            <img src="box_hinged_lid.jpg" alt="Hinged Lid Box">
             <h3>Hinged Lid Timber Box</h3>
             <p class="price">Starting at $40</p>
             <p>Elegant hinged design with optional engraving.</p>
@@ -63,45 +157,17 @@
 
         <h2>Lathe Creations</h2>
         <div class="item">
-            <img src="images/bowl_timber.jpg" alt="Timber Bowl">
+            <img src="bowl_timber.jpg" alt="Timber Bowl">
             <h3>Timber Bowl</h3>
             <p class="price">Starting at $50</p>
             <p>Lathe-turned from solid timber. Various woods available.</p>
         </div>
         <div class="item">
-            <img src="images/rolling_pin.jpg" alt="Rolling Pin">
+            <img src="rolling_pin.jpg" alt="Rolling Pin">
             <h3>Rolling Pin</h3>
             <p class="price">Starting at $30</p>
             <p>Smooth, lathe-crafted timber for perfect dough rolling.</p>
         </div>
-    </section>
-
-    <section class="inspiration-gallery" id="inspirationGallery">
-        <h2>Inspiration Gallery</h2>
-        <p>Explore some of our past creations for ideas!</p>
-        <div class="gallery">
-            <div class="item">
-                <img src="images/inspiration1.jpg" alt="Inspiration Craft 1">
-                <h3>Custom Timber Plaque</h3>
-                <p>Laser-etched family name sign.</p>
-            </div>
-            <div class="item">
-                <img src="images/inspiration2.jpg" alt="Inspiration Craft 2">
-                <h3>Resin Art Coaster</h3>
-                <p>Abstract resin design on timber.</p>
-            </div>
-            <div class="item">
-                <img src="images/inspiration3.jpg" alt="Inspiration Craft 3">
-                <h3>Engraved Jewelry Box</h3>
-                <p>Small box with floral engraving.</p>
-            </div>
-            <div class="item">
-                <img src="images/inspiration4.jpg" alt="Inspiration Craft 4">
-                <h3>Lathe-Turned Vase</h3>
-                <p>Elegant timber vase.</p>
-            </div>
-        </div>
-        <button id="closeBtn" class="close-btn">Close Gallery</button>
     </section>
 
     <section class="contact">
@@ -124,7 +190,5 @@
         </form>
         <p>Or email me at: getonitbrandingandgiftware@gmail.com</p>
     </section>
-
-    <script src="js/script.js"></script>
 </body>
 </html>
