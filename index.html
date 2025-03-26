@@ -23,25 +23,28 @@
             padding: 30px;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
-        /* New styles for the header image */
         .header-image {
             max-width: 100%;
             height: auto;
             display: block;
             margin: 0 auto;
-            max-height: 150px; /* Adjust this value based on your needs */
+            max-height: 150px; /* Default for mobile */
         }
         .about {
             text-align: center;
             padding: 20px;
             color: #4a2c2a;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            max-width: 1200px; /* Limit width on large screens */
+            margin: 0 auto;
         }
         .gallery {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             padding: 20px;
+            max-width: 1400px; /* Limit gallery width */
+            margin: 0 auto;
         }
         .gallery h2 {
             width: 100%;
@@ -53,7 +56,7 @@
         .item {
             margin: 15px;
             padding: 20px;
-            width: 220px;
+            width: 220px; /* Default for mobile */
             text-align: center;
             border-radius: 8px;
             transition: transform 0.3s, box-shadow 0.3s;
@@ -102,12 +105,13 @@
         button:hover {
             background-color: #1b5e20;
         }
-        /* Style for Inspirational Creations */
         .inspirational-creations {
             padding: 20px;
-            background-color: ;
             margin-top: 40px;
             border-radius: 8px;
+            max-width: 1400px; /* Limit width */
+            margin-left: auto;
+            margin-right: auto;
         }
         .inspirational-creations h2 {
             text-align: center;
@@ -116,7 +120,7 @@
         }
         .inspirational-creations .item {
             margin: 15px;
-            width: 250px;
+            width: 250px; /* Default for mobile */
             border: 2px solid #2e7d32;
             border-radius: 8px;
             padding: 10px;
@@ -125,6 +129,39 @@
         }
         .inspirational-creations .item:hover {
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Media Queries for Desktop */
+        @media screen and (min-width: 768px) {
+            .header-image {
+                max-height: 250px; /* Larger header image on desktop */
+            }
+            header {
+                padding: 50px; /* More padding on desktop */
+            }
+            .item {
+                width: 300px; /* Wider items on desktop */
+            }
+            .inspirational-creations .item {
+                width: 320px; /* Slightly wider for inspirational items */
+            }
+            .gallery {
+                padding: 40px; /* More padding on desktop */
+            }
+            h1, h2 {
+                font-size: 2em; /* Larger headings */
+            }
+            .about {
+                padding: 40px;
+                font-size: 1.1em; /* Slightly larger text */
+            }
+            .contact {
+                padding: 40px;
+                max-width: 800px; /* Wider contact form on desktop */
+            }
+            input, textarea, select, button {
+                font-size: 1.1em; /* Larger form elements */
+            }
         }
     </style>
 </head>
@@ -197,7 +234,6 @@
         </div>
     </section>
     
-    <!-- Inspirational Creations Section -->
     <section class="inspirational-creations">
         <h2>Inspirational Creations</h2>
         <div class="item">
