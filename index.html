@@ -28,26 +28,26 @@
             font-size: 2.5em; 
             font-weight: bold;
         }
-        .about {
+        .about, .upload-gallery {
             text-align: center;
             padding: 20px;
             color: #4a2c2a;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
-        .gallery { 
+        .gallery, .user-gallery { 
             display: flex; 
             flex-wrap: wrap; 
             justify-content: center; 
             padding: 20px; 
         }
-        .gallery h2 {
+        .gallery h2, .user-gallery h2 {
             width: 100%;
             text-align: center;
             color: #2e7d32;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
             margin: 20px 0;
         }
-        .item { 
+        .item, .gallery-item { 
             margin: 15px; 
             padding: 20px; 
             width: 220px; 
@@ -56,11 +56,11 @@
             transition: transform 0.3s, box-shadow 0.3s;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
-        .item:hover { 
+        .item:hover, .gallery-item:hover { 
             transform: scale(1.05); 
             box-shadow: 0 0 10px rgba(46, 125, 50, 0.5);
         }
-        .item img { 
+        .item img, .gallery-item img { 
             max-width: 100%; 
             height: auto; 
             border-radius: 5px;
@@ -98,6 +98,20 @@
         }
         button:hover { 
             background-color: #1b5e20; 
+        }
+        .upload-btn {
+            background-color: #2e7d32;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .upload-btn:hover {
+            background-color: #1b5e20;
+        }
+        #imageInput {
+            display: none;
         }
     </style>
 </head>
@@ -170,6 +184,14 @@
         </div>
     </section>
 
+    <section class="upload-gallery">
+        <h2>Upload Your Gallery</h2>
+        <p>Share your own designs or inspiration images!</p>
+        <input type="file" id="imageInput" accept="image/*" multiple>
+        <button class="upload-btn" onclick="document.getElementById('imageInput').click();">Upload Images</button>
+        <div class="user-gallery" id="userGallery"></div>
+    </section>
+
     <section class="contact">
         <h2>Order Now</h2>
         <p>Personalize your order—tell us your design and color preferences!</p>
@@ -190,5 +212,31 @@
         </form>
         <p>Or email me at: getonitbrandingandgiftware@gmail.com</p>
     </section>
+
+    <script>
+        const imageInput = document.getElementById('imageInput');
+        const userGallery = document.getElementById('userGallery');
+
+        imageInput.addEventListener('change', function() {
+            userGallery.innerHTML = ''; // Clear previous images
+            const files = this.files;
+
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                if (file.type.startsWith('image/')) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const img = document.createElement('img');
+                        img.src = e.target.result;
+                        const galleryItem = document.createElement('div');
+                        galleryItem.className = 'gallery-item';
+                        galleryItem.appendChild(img);
+                        userGallery.appendChild(galleryItem);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            }
+        });
+    </script>
 </body>
 </html>
