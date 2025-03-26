@@ -8,7 +8,7 @@
         body { 
             font-family: Arial, sans-serif; 
             margin: 0; 
-            background-image: url('background.jpg') !important;
+            background-image: url('woodgrain.jpg') !important; /* Suggest a wood-themed background */
             background-size: cover; 
             background-position: center; 
             background-repeat: no-repeat; 
@@ -21,12 +21,18 @@
             color: white; 
             text-align: center; 
             padding: 30px; 
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Added shadow */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
         h1 { 
             margin: 0; 
             font-size: 2.5em; 
             font-weight: bold;
+        }
+        .about {
+            text-align: center;
+            padding: 20px;
+            color: #4a2c2a;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
         .gallery { 
             display: flex; 
@@ -34,17 +40,25 @@
             justify-content: center; 
             padding: 20px; 
         }
+        .gallery h2 {
+            width: 100%;
+            text-align: center;
+            color: #2e7d32;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            margin: 20px 0;
+        }
         .item { 
             margin: 15px; 
             padding: 20px; 
             width: 220px; 
             text-align: center; 
             border-radius: 8px; 
-            transition: transform 0.3s;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Added shadow */
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
         .item:hover { 
             transform: scale(1.05); 
+            box-shadow: 0 0 10px rgba(46, 125, 50, 0.5);
         }
         .item img { 
             max-width: 100%; 
@@ -57,19 +71,24 @@
             font-size: 1.2em;
         }
         .contact { 
-            max-width: 500px; 
+            max-width: 600px; 
             margin: 30px auto; 
             padding: 25px; 
             border-radius: 8px; 
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Added shadow */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
-        input, textarea, button { 
+        input, textarea, select, button { 
             width: 100%; 
             margin: 12px 0; 
             padding: 10px; 
             border: none; 
             border-radius: 5px; 
             font-size: 1em;
+            box-sizing: border-box; /* Ensures padding doesn’t affect width */
+        }
+        select {
+            background-color: #fff;
+            color: #4a2c2a;
         }
         button { 
             background-color: #2e7d32; 
@@ -88,33 +107,85 @@
         <p>Handmade with Love</p>
     </header>
 
+    <section class="about">
+        <h2>About Our Craft</h2>
+        <p>Each piece is handcrafted from premium timber or acrylic, using laser engraving, routing, or resin-filling techniques. From chopping boards to lathe-turned vases, we bring your vision to life with precision and care.</p>
+    </section>
+
     <section class="gallery">
+        <h2>Chopping Boards</h2>
         <div class="item">
-            <img src="coasters.jpg" alt="Coaster Sets">
-            <h3>Coaster Sets</h3>
-            <p class="price">starting from $15</p>
-            <p>Perfect for your coffee table!</p>
+            <img src="chopping_board_laser.jpg" alt="Laser-Etched Chopping Board">
+            <h3>Laser-Etched Chopping Board</h3>
+            <p class="price">$45 - $75</p>
+            <p>Custom designs lasered into premium timber. Sizes: 12x18" or 16x24".</p>
         </div>
         <div class="item">
-            <img src="scarf.jpg" alt="Knitted Scarf">
-            <h3>Knitted Scarf</h3>
-            <p class="price">starting from $25</p>
-            <p>Cozy and warm for winter.</p>
+            <img src="chopping_board_resin.jpg" alt="Resin-Filled Chopping Board">
+            <h3>Resin-Filled Chopping Board</h3>
+            <p class="price">$60 - $90</p>
+            <p>Routed designs filled with vibrant resin. Personalize your pattern!</p>
+        </div>
+
+        <h2>Coasters</h2>
+        <div class="item">
+            <img src="coaster_acrylic.jpg" alt="Acrylic Coasters">
+            <h3>Acrylic Coasters</h3>
+            <p class="price">$15 (Set of 4)</p>
+            <p>Laser-etched designs on durable acrylic.</p>
         </div>
         <div class="item">
-            <img src="bracelet.jpg" alt="Beaded Bracelet">
-            <h3>Beaded Bracelet</h3>
-            <p class="price">starting from $10</p>
-            <p>Simple, stylish, handmade.</p>
+            <img src="coaster_resin.jpg" alt="Resin Timber Coasters">
+            <h3>Resin Timber Coasters</h3>
+            <p class="price">$25 (Set of 4)</p>
+            <p>Timber with routed, resin-filled accents.</p>
+        </div>
+
+        <h2>Custom Boxes</h2>
+        <div class="item">
+            <img src="box_sliding_lid.jpg" alt="Sliding Lid Box">
+            <h3>Sliding Lid Timber Box</h3>
+            <p class="price">$35 - $50</p>
+            <p>Handcrafted with a smooth sliding lid. Custom sizes available.</p>
+        </div>
+        <div class="item">
+            <img src="box_hinged_lid.jpg" alt="Hinged Lid Box">
+            <h3>Hinged Lid Timber Box</h3>
+            <p class="price">$40 - $60</p>
+            <p>Elegant hinged design with optional engraving.</p>
+        </div>
+
+        <h2>Lathe Creations</h2>
+        <div class="item">
+            <img src="bowl_timber.jpg" alt="Timber Bowl">
+            <h3>Timber Bowl</h3>
+            <p class="price">$50 - $80</p>
+            <p>Lathe-turned from solid timber. Various woods available.</p>
+        </div>
+        <div class="item">
+            <img src="rolling_pin.jpg" alt="Rolling Pin">
+            <h3>Rolling Pin</h3>
+            <p class="price">$30</p>
+            <p>Smooth, lathe-crafted timber for perfect dough rolling.</p>
         </div>
     </section>
 
     <section class="contact">
         <h2>Order Now</h2>
+        <p>Personalize your order—tell us your design and color preferences!</p>
         <form action="https://formspree.io/f/xyz123" method="POST">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="order" placeholder="What would you like to order?" rows="4" required></textarea>
+            <select name="product" required>
+                <option value="" disabled selected>Select a Product</option>
+                <option value="chopping_board">Chopping Board</option>
+                <option value="coasters">Coasters</option>
+                <option value="box">Custom Box</option>
+                <option value="lathe_item">Lathe Item (Bowl, Plate, etc.)</option>
+            </select>
+            <input type="text" name="design" placeholder="Describe Your Custom Design">
+            <input type="text" name="resin_color" placeholder="Preferred Resin Color (if applicable)">
+            <textarea name="details" placeholder="Additional Details (e.g., size, wood type)" rows="4"></textarea>
             <button type="submit">Send Order</button>
         </form>
         <p>Or email me at: getonitbrandingandgiftware@gmail.com</p>
