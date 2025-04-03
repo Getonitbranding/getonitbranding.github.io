@@ -21,7 +21,7 @@
             color: white;
             text-align: center;
             padding: 30px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for contrast */
         }
         .header-image {
             max-width: 100%;
@@ -34,33 +34,39 @@
             text-align: center;
             padding: 20px;
             color: #4a2c2a;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-            max-width: 1200px; /* Limit width on large screens */
+            background: rgba(255, 255, 255, 0.8); /* Light semi-transparent background */
+            max-width: 1200px;
             margin: 0 auto;
+            font-weight: 500; /* Slightly bolder text */
+            font-size: 1.1em; /* Slightly larger text */
         }
         .gallery {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             padding: 20px;
-            max-width: 1400px; /* Limit gallery width */
+            max-width: 1400px;
             margin: 0 auto;
         }
         .gallery h2 {
             width: 100%;
             text-align: center;
             color: #2e7d32;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
             margin: 20px 0;
+            font-weight: 600;
         }
         .item {
             margin: 15px;
             padding: 20px;
-            width: 220px; /* Default for mobile */
+            width: 286px; /* Increased from 220px by 30% (220 * 1.3 = 286) */
             text-align: center;
             border-radius: 8px;
             transition: transform 0.3s, box-shadow 0.3s;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+            color: #4a2c2a;
+            font-weight: 500;
         }
         .item:hover {
             transform: scale(1.05);
@@ -81,7 +87,9 @@
             margin: 30px auto;
             padding: 25px;
             border-radius: 8px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            background: rgba(255, 255, 255, 0.9);
+            color: #4a2c2a;
+            font-weight: 500;
         }
         input, textarea, select, button {
             width: 100%;
@@ -109,23 +117,28 @@
             padding: 20px;
             margin-top: 40px;
             border-radius: 8px;
-            max-width: 1400px; /* Limit width */
+            max-width: 1400px;
             margin-left: auto;
             margin-right: auto;
         }
         .inspirational-creations h2 {
             text-align: center;
             color: #2e7d32;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            font-weight: 600;
         }
         .inspirational-creations .item {
             margin: 15px;
-            width: 250px; /* Default for mobile */
+            width: 325px; /* Increased from 250px by 30% (250 * 1.3 = 325) */
             border: 2px solid #2e7d32;
             border-radius: 8px;
             padding: 10px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.9);
+            color: #4a2c2a;
+            font-weight: 500;
         }
         .inspirational-creations .item:hover {
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
@@ -140,10 +153,10 @@
                 padding: 50px; /* More padding on desktop */
             }
             .item {
-                width: 300px; /* Wider items on desktop */
+                width: 390px; /* Increased from 300px by 30% (300 * 1.3 = 390) */
             }
             .inspirational-creations .item {
-                width: 320px; /* Slightly wider for inspirational items */
+                width: 416px; /* Increased from 320px by 30% (320 * 1.3 = 416) */
             }
             .gallery {
                 padding: 40px; /* More padding on desktop */
@@ -153,7 +166,7 @@
             }
             .about {
                 padding: 40px;
-                font-size: 1.1em; /* Slightly larger text */
+                font-size: 1.2em; /* Slightly larger text */
             }
             .contact {
                 padding: 40px;
